@@ -36,13 +36,22 @@
 
     .hero {
       display: flex;
-      align-items: center; /* Vertically centers the logo and text */
-      gap: 40px;          /* Adds space between logo and text */
-      text-align: left;   /* Aligns text to the left */
+      align-items: center;
+      gap: 60px; /* Increased gap for better separation with a larger logo */
+      text-align: left;
+      max-width: 1000px; /* Expanded slightly to accommodate the wider layout */
+      margin: 0 auto 50px auto;
+    }
+
+    .hero img {
+      width: 500px; /* Your desired size */
+      height: auto;
+      flex-shrink: 0; /* Prevents the logo from shrinking */
     }
 
     .hero-content {
-      flex: 1; /* Allows text to take up remaining space */
+      flex: 1;
+      min-width: 300px; /* Ensures text doesn't get too squished */
     }
 
     /* Adjust H1 and tagline to match the new left alignment */
@@ -108,17 +117,20 @@
 <body>
 
   <header class="hero">
-      <img src="NTECS_Logo_Fixed.png" alt="NTECS Logo" style="width: 250px; height: auto;">
+      <img src="NTECS_Logo_Fixed.png" alt="NTECS Logo">
+      
+      <header class="hero">
+      <img src="NTECS_Logo_Fixed.png" alt="NTECS Logo">
       
       <div class="hero-content">
         <h1>North Texas Event Connectivity Services</h1>
         <div class="tagline">Enterprise-Grade WiFi for Temporary Events</div>
-        <p style="color: var(--text-muted);">
+        <p style="color: var(--text-muted); font-size: 1.1rem;">
           Specializing in robust point-of-sale networks, vendor WiFi, and dual-carrier failover for the DFW area.
         </p>
       </div>
     </header>
-
+    
     <div class="pricing-wrap">
       <div class="card">
         <h3>Starter Event Kit</h3>
